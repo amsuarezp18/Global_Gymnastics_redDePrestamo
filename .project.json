@@ -1,0 +1,52 @@
+{
+    "dataBinding": {
+        "/webapp/view/Home.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Editdeportista.view.xml": {
+            "entitySet": "/AcudienteSet"
+        }, 
+        "/webapp/view/Page7.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Prestamosadmin.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Mainadmin.view.xml": {
+            "entitySet": "/AdminSet"
+        }, 
+        "/webapp/view/Inventario.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Redirectlogin.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Logindeportista.view.xml": {
+            "entitySet": "/AcudienteSet"
+        }, 
+        "/webapp/view/Loginadmin.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Signup.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/MainDeportista.view.xml": {
+            "entitySet": "/AcudienteSet"
+        }, 
+        "/webapp/view/Solicitudpres.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/ModificarEstado.view.xml": {
+            "entitySet": "/PrestamoSet"
+        }, 
+        "/webapp/view/Page27.view.xml": {
+            "entitySet": "/RelationFakeSet"
+        }, 
+        "/webapp/view/Page28.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Dialog1.view.xml": {
+            "entitySet": "/PrestamoSet"
+        } 
+    }
+}

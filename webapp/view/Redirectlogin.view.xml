@@ -1,0 +1,50 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.globalGym.controller.Redirectlogin" xmlns="sap.m" xmlns:layout="sap.ui.commons.layout">
+    <Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
+        <content>
+            <layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+                <layout:positions>
+                    <layout:PositionContainer left="827px" top="397px">
+                        <layout:control>
+                            <VBox alignItems="Center" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                                <items>
+                                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                                        <items>
+                                            <Button text="Login deportista" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiLargeMarginTop" press="_onButtonPress"/>
+                                            <Button text="Login administrador" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiLargeMarginTop sapUiMediumMarginBegin" press="_onButtonPress1"/>
+                                        </items>
+                                        <layoutData/>
+                                    </HBox>
+                                </items>
+                                <layoutData/>
+                            </VBox>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="922px" top="344px">
+                        <layout:control>
+                            <Title text="Login" titleStyle="H1" width="auto" textAlign="Center" visible="true" wrapping="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="0px" top="2px">
+                        <layout:control>
+                            <Image src="/webapp/resources/Captura_de_pantalla_de_2021-05-19_20-13-14.png" height="73px" width="1278px" visible="true" densityAware="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="45px" top="233px">
+                        <layout:control>
+                            <Image src="/webapp/resources/ni_as.png" height="390px" width="635px" visible="true" densityAware="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="0px" top="795px">
+                        <layout:control>
+                            <Image src="/webapp/resources/footer.png" height="313px" width="1280px" visible="true" densityAware="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                </layout:positions>
+            </layout:AbsoluteLayout>
+        </content>
+        <footer/>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

@@ -1,0 +1,189 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="5d8ea024fe991c1c15688146" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="5d8ea024fe991c1c15688146_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="EstudianteSet" EntityType="5d8ea024fe991c1c15688146.Estudiante" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="AdminSet" EntityType="5d8ea024fe991c1c15688146.Admin" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="EquiposSet" EntityType="5d8ea024fe991c1c15688146.Equipos" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="PapasSet" EntityType="5d8ea024fe991c1c15688146.Papas" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="AcudienteSet" EntityType="5d8ea024fe991c1c15688146.Acudiente" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="AcudientepapaPapas" Association="5d8ea024fe991c1c15688146.AcudientepapaPapas" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="AcudienteSet" Role="FromRole_AcudientepapaPapas"/>
+                    <End EntitySet="PapasSet" Role="ToRole_AcudientepapaPapas"/>
+                </AssociationSet>
+                <AssociationSet Name="AcudientehijoEstudiante" Association="5d8ea024fe991c1c15688146.AcudientehijoEstudiante" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="AcudienteSet" Role="FromRole_AcudientehijoEstudiante"/>
+                    <End EntitySet="EstudianteSet" Role="ToRole_AcudientehijoEstudiante"/>
+                </AssociationSet>
+                <EntitySet Name="PrestamoSet" EntityType="5d8ea024fe991c1c15688146.Prestamo" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="PrestamoEstudiantePreEstudiante" Association="5d8ea024fe991c1c15688146.PrestamoEstudiantePreEstudiante" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="PrestamoSet" Role="FromRole_PrestamoEstudiantePreEstudiante"/>
+                    <End EntitySet="EstudianteSet" Role="ToRole_PrestamoEstudiantePreEstudiante"/>
+                </AssociationSet>
+                <AssociationSet Name="PrestamoEquipoPreEquipos" Association="5d8ea024fe991c1c15688146.PrestamoEquipoPreEquipos" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="PrestamoSet" Role="FromRole_PrestamoEquipoPreEquipos"/>
+                    <End EntitySet="EquiposSet" Role="ToRole_PrestamoEquipoPreEquipos"/>
+                </AssociationSet>
+                <EntitySet Name="FalsoSet" EntityType="5d8ea024fe991c1c15688146.Falso" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="RelationFakeSet" EntityType="5d8ea024fe991c1c15688146.RelationFake" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="RelationFakeestudeEstudiante" Association="5d8ea024fe991c1c15688146.RelationFakeestudeEstudiante" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="RelationFakeSet" Role="FromRole_RelationFakeestudeEstudiante"/>
+                    <End EntitySet="EstudianteSet" Role="ToRole_RelationFakeestudeEstudiante"/>
+                </AssociationSet>
+            </EntityContainer>
+            <EntityType Name="Estudiante">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre"/>
+                <Property Name="Apellido" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Apellido"/>
+                <Property Name="Direccion" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Direccion"/>
+                <Property Name="Genero" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Genero"/>
+                <Property Name="Usuario" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Usuario"/>
+                <Property Name="FechaNac" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="FechaNac"/>
+                <Property Name="Contrasena" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+            </EntityType>
+            <EntityType Name="Admin">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre"/>
+                <Property Name="Apellido" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Apellido"/>
+                <Property Name="Cargo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Cargo"/>
+            </EntityType>
+            <EntityType Name="Equipos">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre"/>
+                <Property Name="Cantidad" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Cantidad"/>
+                <Property Name="CantidadPres" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CantidadPres"/>
+                <Property Name="Imagen" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Imagen"/>
+            </EntityType>
+            <EntityType Name="Papas">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre"/>
+                <Property Name="Apellido" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Apellido"/>
+                <Property Name="NumeroTelf" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="NumeroTelf"/>
+                <Property Name="Correo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Correo"/>
+            </EntityType>
+            <EntityType Name="Acudiente">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_f5ce1f9b072fe4c915783764_00045" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_f5ce1f9b072fe4c915783764_00045"/>
+                <Property Name="___FK_f5ce1f9b072fe4c915783764_00047" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_f5ce1f9b072fe4c915783764_00047"/>
+                <NavigationProperty Name="papa" Relationship="5d8ea024fe991c1c15688146.AcudientepapaPapas" FromRole="FromRole_AcudientepapaPapas" ToRole="ToRole_AcudientepapaPapas"/>
+                <NavigationProperty Name="hijo" Relationship="5d8ea024fe991c1c15688146.AcudientehijoEstudiante" FromRole="FromRole_AcudientehijoEstudiante" ToRole="ToRole_AcudientehijoEstudiante"/>
+            </EntityType>
+            <Association Name="AcudientepapaPapas">
+                <End Type="5d8ea024fe991c1c15688146.Acudiente" Multiplicity="1" Role="FromRole_AcudientepapaPapas"/>
+                <End Type="5d8ea024fe991c1c15688146.Papas" Multiplicity="1" Role="ToRole_AcudientepapaPapas"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_AcudientepapaPapas">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_AcudientepapaPapas">
+                        <PropertyRef Name="___FK_f5ce1f9b072fe4c915783764_00045"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="AcudientehijoEstudiante">
+                <End Type="5d8ea024fe991c1c15688146.Acudiente" Multiplicity="1" Role="FromRole_AcudientehijoEstudiante"/>
+                <End Type="5d8ea024fe991c1c15688146.Estudiante" Multiplicity="1" Role="ToRole_AcudientehijoEstudiante"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_AcudientehijoEstudiante">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_AcudientehijoEstudiante">
+                        <PropertyRef Name="___FK_f5ce1f9b072fe4c915783764_00047"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Prestamo">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="estado" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="estado"/>
+                <Property Name="fechaIni" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="fechaIni"/>
+                <Property Name="fechaFin" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="fechaFin"/>
+                <Property Name="___FK_f5ce1f9b072fe4c915783764_00054" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_f5ce1f9b072fe4c915783764_00054"/>
+                <Property Name="___FK_f5ce1f9b072fe4c915783764_00056" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_f5ce1f9b072fe4c915783764_00056"/>
+                <Property Name="status" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="status"/>
+                <NavigationProperty Name="EstudiantePre" Relationship="5d8ea024fe991c1c15688146.PrestamoEstudiantePreEstudiante" FromRole="FromRole_PrestamoEstudiantePreEstudiante" ToRole="ToRole_PrestamoEstudiantePreEstudiante"/>
+                <NavigationProperty Name="EquipoPre" Relationship="5d8ea024fe991c1c15688146.PrestamoEquipoPreEquipos" FromRole="FromRole_PrestamoEquipoPreEquipos" ToRole="ToRole_PrestamoEquipoPreEquipos"/>
+            </EntityType>
+            <Association Name="PrestamoEstudiantePreEstudiante">
+                <End Type="5d8ea024fe991c1c15688146.Prestamo" Multiplicity="1" Role="FromRole_PrestamoEstudiantePreEstudiante"/>
+                <End Type="5d8ea024fe991c1c15688146.Estudiante" Multiplicity="1" Role="ToRole_PrestamoEstudiantePreEstudiante"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_PrestamoEstudiantePreEstudiante">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_PrestamoEstudiantePreEstudiante">
+                        <PropertyRef Name="___FK_f5ce1f9b072fe4c915783764_00054"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="PrestamoEquipoPreEquipos">
+                <End Type="5d8ea024fe991c1c15688146.Prestamo" Multiplicity="1" Role="FromRole_PrestamoEquipoPreEquipos"/>
+                <End Type="5d8ea024fe991c1c15688146.Equipos" Multiplicity="1" Role="ToRole_PrestamoEquipoPreEquipos"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_PrestamoEquipoPreEquipos">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_PrestamoEquipoPreEquipos">
+                        <PropertyRef Name="___FK_f5ce1f9b072fe4c915783764_00056"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Falso">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre"/>
+                <Property Name="Cantidad" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Cantidad"/>
+                <Property Name="CantidadPres" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CantidadPres"/>
+                <Property Name="Imagen" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Imagen"/>
+            </EntityType>
+            <EntityType Name="RelationFake">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Estado" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Estado"/>
+                <Property Name="FechaIni" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FechaIni"/>
+                <Property Name="FechaFin" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FechaFin"/>
+                <Property Name="Status" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Status"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre"/>
+                <Property Name="Cantidad" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Cantidad"/>
+                <Property Name="CantidadPres" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CantidadPres"/>
+                <Property Name="Imagen" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Imagen"/>
+                <Property Name="___FK_54f0f6b4a5c8d65e15787392_00003" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_54f0f6b4a5c8d65e15787392_00003"/>
+                <Property Name="acepto" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="acepto"/>
+                <NavigationProperty Name="estude" Relationship="5d8ea024fe991c1c15688146.RelationFakeestudeEstudiante" FromRole="FromRole_RelationFakeestudeEstudiante" ToRole="ToRole_RelationFakeestudeEstudiante"/>
+            </EntityType>
+            <Association Name="RelationFakeestudeEstudiante">
+                <End Type="5d8ea024fe991c1c15688146.RelationFake" Multiplicity="1" Role="FromRole_RelationFakeestudeEstudiante"/>
+                <End Type="5d8ea024fe991c1c15688146.Estudiante" Multiplicity="1" Role="ToRole_RelationFakeestudeEstudiante"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_RelationFakeestudeEstudiante">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_RelationFakeestudeEstudiante">
+                        <PropertyRef Name="___FK_54f0f6b4a5c8d65e15787392_00003"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

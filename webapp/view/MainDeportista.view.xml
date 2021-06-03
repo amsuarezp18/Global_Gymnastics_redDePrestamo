@@ -1,0 +1,82 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.globalGym.controller.MainDeportista" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.f" xmlns:layout="sap.ui.commons.layout">
+    <Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
+        <content>
+            <layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+                <layout:positions>
+                    <layout:PositionContainer left="0px" top="233px">
+                        <layout:control>
+                            <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                                <items>
+                                    <GenericTile header="Solicitar Prestámo" subheader="crear solicitud" frameType="OneByOne" class="sapUiLargeMargin" press="_onGenericTilePress">
+                                        <tileContent>
+                                            <TileContent footer="" unit="">
+                                                <content>
+                                                    <NewsContent contentText="Solicitar ->" subheader="" class="sapUiMediumMarginTop sapUiSmallMarginBegin"/>
+                                                </content>
+                                            </TileContent>
+                                        </tileContent>
+                                    </GenericTile>
+                                    <GenericTile header="Historial Prestámo" subheader="historial" frameType="OneByOne" class="sapUiLargeMargin" press="_onGenericTilePress1">
+                                        <tileContent>
+                                            <TileContent footer="" unit="">
+                                                <content>
+                                                    <NewsContent contentText="Ver historial ->" subheader="" class="sapUiMediumMarginTop sapUiSmallMarginBegin"/>
+                                                </content>
+                                            </TileContent>
+                                        </tileContent>
+                                    </GenericTile>
+                                </items>
+                                <layoutData/>
+                            </HBox>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="373px" top="66px">
+                        <layout:control>
+                            <VBox alignItems="Center" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Center" renderType="Div" visible="true" displayInline="false" class="sapUiLargeMarginBegin">
+                                <items>
+                                    <Title text="Información acudiente" titleStyle="H3" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                                    <Text text="{papa/Nombre}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true" class="sapUiTinyMargin"/>
+                                    <Text text="{papa/NumeroTelf}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true" class="sapUiTinyMargin"/>
+                                    <Text text="{papa/Correo}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </items>
+                                <layoutData/>
+                            </VBox>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="232px" top="69px">
+                        <layout:control>
+                            <VBox alignItems="Center" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Center" renderType="Div" visible="true" displayInline="false">
+                                <items>
+                                    <Title text="Información" titleStyle="H3" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                                    <Text text="{hijo/Usuario}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true" class="sapUiTinyMargin"/>
+                                    <Text text="{hijo/Nombre}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true" class="sapUiTinyMargin"/>
+                                    <Text text="{hijo/Direccion}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </items>
+                                <layoutData/>
+                            </VBox>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="1191px" top="15px">
+                        <layout:control>
+                            <core:Icon src="sap-icon://log" size="38px" color="#286EB4" height="48px" width="48px" visible="true" press="_onIconPress"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="1122px" top="17px">
+                        <layout:control>
+                            <core:Icon src="sap-icon://account" size="38px" color="#286EB4" height="48px" width="48px" visible="true" press="_onIconPress1"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="65px" top="65px">
+                        <layout:control>
+                            <f:Avatar src="" initials="" displayShape="Circle" displaySize="XL" imageFitType="Cover"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                </layout:positions>
+            </layout:AbsoluteLayout>
+        </content>
+        <footer/>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

@@ -1,0 +1,325 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "com.sap.build.standard.globalGym",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.2.2"
+		},
+		"dataSources": {
+			"local": {
+				"uri": "/here/goes/your/serviceUrl/local/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"ach": "ach",
+		"resources": "resources.json",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.3.0",
+		"rootView": {
+			"viewName": "generated.app.view.Page28",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.50.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"": {
+				"dataSource": "local",
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"loadMetadataAsync": false,
+					"json": true,
+					"bJSON": true,
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Inline",
+					"useBatch": true,
+					"refreshAfterChange": false,
+					"disableHeadRequestForToken": true
+				}
+			}
+		},
+		"resources": {
+			"css": []
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sap.build.standard.globalGym.view",
+				"controlId": "App",
+				"clearTarget": false,
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": [
+						"Home"
+					]
+				}
+			},
+			"targets": {
+				"Home": {
+					"controlAggregation": "pages",
+					"viewName": "Home",
+					"viewId": "Home",
+					"viewLevel": 14,
+					"transition": "slide"
+				},
+				"Editdeportista": {
+					"controlAggregation": "pages",
+					"viewName": "Editdeportista",
+					"viewId": "Editdeportista",
+					"viewLevel": 6,
+					"transition": "slide"
+				},
+				"Page7": {
+					"controlAggregation": "pages",
+					"viewName": "Page7",
+					"viewId": "Page7",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"Prestamosadmin": {
+					"controlAggregation": "pages",
+					"viewName": "Prestamosadmin",
+					"viewId": "Prestamosadmin",
+					"viewLevel": 5,
+					"transition": "slide"
+				},
+				"Mainadmin": {
+					"controlAggregation": "pages",
+					"viewName": "Mainadmin",
+					"viewId": "Mainadmin",
+					"viewLevel": 8,
+					"transition": "slide"
+				},
+				"Inventario": {
+					"controlAggregation": "pages",
+					"viewName": "Inventario",
+					"viewId": "Inventario",
+					"viewLevel": 9,
+					"transition": "slide"
+				},
+				"Redirectlogin": {
+					"controlAggregation": "pages",
+					"viewName": "Redirectlogin",
+					"viewId": "Redirectlogin",
+					"viewLevel": 13,
+					"transition": "slide"
+				},
+				"Logindeportista": {
+					"controlAggregation": "pages",
+					"viewName": "Logindeportista",
+					"viewId": "Logindeportista",
+					"viewLevel": 11,
+					"transition": "slide"
+				},
+				"Loginadmin": {
+					"controlAggregation": "pages",
+					"viewName": "Loginadmin",
+					"viewId": "Loginadmin",
+					"viewLevel": 10,
+					"transition": "slide"
+				},
+				"Signup": {
+					"controlAggregation": "pages",
+					"viewName": "Signup",
+					"viewId": "Signup",
+					"viewLevel": 12,
+					"transition": "slide"
+				},
+				"MainDeportista": {
+					"controlAggregation": "pages",
+					"viewName": "MainDeportista",
+					"viewId": "MainDeportista",
+					"viewLevel": 7,
+					"transition": "slide"
+				},
+				"Solicitudpres": {
+					"controlAggregation": "pages",
+					"viewName": "Solicitudpres",
+					"viewId": "Solicitudpres",
+					"viewLevel": 3,
+					"transition": "slide"
+				},
+				"ModificarEstado": {
+					"controlAggregation": "pages",
+					"viewName": "ModificarEstado",
+					"viewId": "ModificarEstado",
+					"viewLevel": 4,
+					"transition": "slide"
+				},
+				"Page27": {
+					"controlAggregation": "pages",
+					"viewName": "Page27",
+					"viewId": "Page27",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"Page28": {
+					"controlAggregation": "pages",
+					"viewName": "Page28",
+					"viewId": "Page28",
+					"viewLevel": 1,
+					"transition": "slide"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "Home/:context:",
+					"name": "Home",
+					"target": [
+						"Home"
+					]
+				},
+				{
+					"pattern": "",
+					"name": "default",
+					"target": [
+						"Home"
+					]
+				},
+				{
+					"pattern": "Editdeportista/:context:",
+					"name": "Editdeportista",
+					"target": [
+						"Editdeportista"
+					]
+				},
+				{
+					"pattern": "Page7/:context:",
+					"name": "Page7",
+					"target": [
+						"Page7"
+					]
+				},
+				{
+					"pattern": "Prestamosadmin/:context:",
+					"name": "Prestamosadmin",
+					"target": [
+						"Prestamosadmin"
+					]
+				},
+				{
+					"pattern": "Mainadmin/:context:",
+					"name": "Mainadmin",
+					"target": [
+						"Mainadmin"
+					]
+				},
+				{
+					"pattern": "Inventario/:context:",
+					"name": "Inventario",
+					"target": [
+						"Inventario"
+					]
+				},
+				{
+					"pattern": "Redirectlogin/:context:",
+					"name": "Redirectlogin",
+					"target": [
+						"Redirectlogin"
+					]
+				},
+				{
+					"pattern": "Logindeportista/:context:",
+					"name": "Logindeportista",
+					"target": [
+						"Logindeportista"
+					]
+				},
+				{
+					"pattern": "Loginadmin/:context:",
+					"name": "Loginadmin",
+					"target": [
+						"Loginadmin"
+					]
+				},
+				{
+					"pattern": "Signup/:context:",
+					"name": "Signup",
+					"target": [
+						"Signup"
+					]
+				},
+				{
+					"pattern": "MainDeportista/:context:",
+					"name": "MainDeportista",
+					"target": [
+						"MainDeportista"
+					]
+				},
+				{
+					"pattern": "Solicitudpres/:context:",
+					"name": "Solicitudpres",
+					"target": [
+						"Solicitudpres"
+					]
+				},
+				{
+					"pattern": "ModificarEstado/:context:",
+					"name": "ModificarEstado",
+					"target": [
+						"ModificarEstado"
+					]
+				},
+				{
+					"pattern": "Page27/:context:",
+					"name": "Page27",
+					"target": [
+						"Page27"
+					]
+				},
+				{
+					"pattern": "Page28/:context:",
+					"name": "Page28",
+					"target": [
+						"Page28"
+					]
+				}
+			]
+		}
+	}
+}
